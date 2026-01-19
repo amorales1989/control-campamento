@@ -36,9 +36,9 @@ const updateField = (student: Student, field: keyof Student, value: any) => {
             <th class="p-4 border-b border-white/10">DNI</th>
             <th class="p-4 border-b border-white/10 text-center">Pagó</th>
             <th class="p-4 border-b border-white/10">Monto</th>
-            <th class="p-4 border-b border-white/10 text-center">No puede pagar</th>
-            <th class="p-4 border-b border-white/10 text-center">Autorización</th>
-            <th class="p-4 border-b border-white/10 text-center">Acciones</th>
+            <th class="p-4 border-b border-white/10 text-center"><span class="hidden-mobile">No puede pagar</span><span class="show-mobile">No paga</span></th>
+            <th class="p-4 border-b border-white/10 text-center"><span class="hidden-mobile">Autorización</span><span class="show-mobile">Auth</span></th>
+            <th class="p-4 border-b border-white/10 text-center"></th>
           </tr>
         </thead>
         <tbody>
@@ -110,6 +110,8 @@ const updateField = (student: Student, field: keyof Student, value: any) => {
   </div>
 </template>
 
+</style>
+
 <style scoped>
 .overflow-x-auto {
   overflow-x: auto;
@@ -158,5 +160,24 @@ const updateField = (student: Student, field: keyof Student, value: any) => {
 }
 .w-24 {
   width: 6rem;
+}
+
+@media (max-width: 768px) {
+  .p-4 {
+    padding: 0.5rem;
+  }
+  .w-24 {
+    width: 4rem;
+  }
+  table {
+    font-size: 0.75rem;
+  }
+  input[type="checkbox"] {
+    width: 1rem;
+    height: 1rem;
+  }
+  .btn-danger {
+    padding: 0.25rem;
+  }
 }
 </style>

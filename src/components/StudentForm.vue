@@ -59,16 +59,27 @@ const handleSubmit = () => {
 }
 .flex {
   display: flex;
-}
-.gap-4 {
   gap: 1rem;
 }
+
 .flex-1 {
   flex: 1;
 }
+
 .w-32 {
   width: 8rem;
 }
+
+@media (max-width: 640px) {
+  .flex {
+    flex-direction: column;
+  }
+  
+  .w-32 {
+    width: 100%;
+  }
+}
+
 .text-xl {
   font-size: 1.25rem;
 }

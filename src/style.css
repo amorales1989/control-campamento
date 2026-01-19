@@ -138,3 +138,17 @@ input[type="number"]:focus {
 .mt-4 {
   margin-top: 1rem;
 }
+
+.show-mobile {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .hidden-mobile {
+    display: none;
+  }
+
+  .show-mobile {
+    display: inline;
+  }
+}
