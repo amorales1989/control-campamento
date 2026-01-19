@@ -110,8 +110,6 @@ const updateField = (student: Student, field: keyof Student, value: any) => {
   </div>
 </template>
 
-</style>
-
 <style scoped>
 .overflow-x-auto {
   overflow-x: auto;
