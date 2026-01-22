@@ -6,4 +6,9 @@ export interface Student {
     amount: number;
     cannotPay: boolean;
     authorization: boolean;
+    medication?: string;
+    specialCare?: string;
+    headacheMedication?: string;
+    feverMedication?: string;
+    emergencyContact?: string;
 }

@@ -78,6 +78,10 @@ const handleSubmit = () => {
   .w-32 {
     width: 100%;
   }
+  
+  .btn-primary {
+    width: 100%;
+  }
 }
 
 .text-xl {
