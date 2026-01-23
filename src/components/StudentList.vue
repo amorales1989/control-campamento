@@ -36,8 +36,8 @@ const updateField = (student: Student, field: keyof Student, value: any) => {
             <th class="p-4 border-b border-white/10">DNI</th>
             <th class="p-4 border-b border-white/10 text-center">Pagó</th>
             <th class="p-4 border-b border-white/10">Monto</th>
-            <th class="p-4 border-b border-white/10 text-center">No paga</th>
-            <th class="p-4 border-b border-white/10 text-center">Auth</th>
+            <th class="p-4 border-b border-white/10 text-center">No puede pagar</th>
+            <th class="p-4 border-b border-white/10 text-center">Autorización</th>
             <th class="p-4 border-b border-white/10 text-center"></th>
           </tr>
         </thead>
@@ -136,13 +136,13 @@ const updateField = (student: Student, field: keyof Student, value: any) => {
             <input type="number" :value="student.amount" :disabled="student.cannotPay" @input="(e) => updateField(student, 'amount', Number((e.target as HTMLInputElement).value))" class="amount-input" />
           </div>
           <div class="card-row">
-            <span>No paga:</span>
+            <span>No puede pagar:</span>
             <label class="checkbox-wrapper" :class="{ 'opacity-50': student.paid }">
               <input type="checkbox" :checked="student.cannotPay" :disabled="student.paid" @change="(e) => updateField(student, 'cannotPay', (e.target as HTMLInputElement).checked)" />
             </label>
           </div>
           <div class="card-row">
-            <span>Auth:</span>
+            <span>Autorizacion:</span>
             <label class="checkbox-wrapper">
               <input type="checkbox" :checked="student.authorization" @change="(e) => updateField(student, 'authorization', (e.target as HTMLInputElement).checked)" />
             </label>

@@ -189,6 +189,9 @@ const handleSubmit = async () => {
 @media (max-width: 640px) {
   .health-form-container {
     margin: 1rem auto;
+    width: 100%;
+    max-width: 100%;
+    padding: 0;
   }
   
   .form-card {
